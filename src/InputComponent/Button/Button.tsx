@@ -1,16 +1,18 @@
-import React from "react";
 import styled from "styled-components";
 import { ButtonSizesEnum, ButtonTypes } from "./interfaces";
-import { ButtonSizes } from "./Variations";
+import { ButtonMaxHeight } from "./Variations";
 
 const Container = styled.div<ButtonTypes>`
-  max-width: 50px;
-  max-height: ${({ size }) => ButtonSizes[size]};
-  border: 1px solid black;
-  font-size: 16px;
+  max-width: fit-content;
+  max-height: ${({ size }) => ButtonMaxHeight[size]};
+  border: 1px solid white;
+  font-size: ${({ size }) => ButtonMaxHeight[size]};
+  align-items: center;
+  justify-items: center;
+  display: flex;
 `;
 interface ButtonProps {
-  size: string;
+  size: ButtonSizesEnum;
 }
 const Button = ({ size }: ButtonProps) => {
   return <Container size={size}>Button</Container>;

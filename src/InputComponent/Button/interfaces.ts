@@ -6,5 +6,5 @@ export enum ButtonSizesEnum {
   xs,
 }
 export interface ButtonTypes {
-  size: string;
+  size: ButtonSizesEnum;
 }

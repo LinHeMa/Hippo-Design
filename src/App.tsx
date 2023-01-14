@@ -1,13 +1,23 @@
 import { useState } from "react";
+import styled from "styled-components";
 import reactLogo from "./assets/react.svg";
 import Button from "./InputComponent/Button/Button";
 
-function App() {
-  const [count, setCount] = useState(0);
+const Row = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
+function App() {
   return (
     <div className="App">
-      <Button size='xs'/>
+      <Row>
+        <Button size="xs" />
+        <Button size="s" />
+        <Button size="m" />
+        <Button size="l" />
+        <Button size="xl" />
+      </Row>
     </div>
   );
 }
